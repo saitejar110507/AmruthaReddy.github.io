@@ -1,0 +1,55 @@
+h1{
+    color: blue;
+}
+h2{
+    color: red;
+}
+#top img{
+    margin-right: 20%;
+}
+#top a{
+    padding-right: 50px;
+}
+#top{
+    background-color: aquamarine;
+    padding-bottom: 20px;
+}
+body{
+    background-color: #B6FFFA;
+}
+input:required{
+    border: 2px groove violet;
+}
+input:optional{
+    border: 2px dashed violet;
+}
+input:disabled{
+    border: 2px dotted violet;
+}
+.p{
+    display: none;
+}
+input:hover +p{ 
+    display: inline;
+    background-color: red;
+}
+input:focus{
+    background-color: silver;
+    font-weight: bold;
+}
+.img{
+    display: none;
+}
+input[type="email"]:focus:valid ~ img.valid{
+    display: inline;
+    height: 20px;
+    width: 20px;
+}
+input[type="email"]:focus:invalid ~ img.invalid{
+    display: inline;
+    height: 20px;
+    width: 20px;
+}
+input[type="submit"]{
+    border: 2px solid violet;
+}

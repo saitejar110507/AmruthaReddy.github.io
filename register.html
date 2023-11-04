@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <fieldset>
+        <h1>Registration Form</h1>
+        <legend>Sign up</legend>
+        <form action="thank.html">
+        <label for="name">Name</label><br>
+        <input type="text" required id="name" name="name"pattern="[a-zA-z]{3,20}">
+        <p class="p">Enter your name</p>
+        <br><br>
+        <label for="email">Email</label><br>
+        <input type="email" required id="email" name="email">
+        <p class="p">Enter your Email</p>
+        <img class="valid img" src="check.jpeg" alt="">
+        <img class="invalid img" src="warn.jpeg" alt="">
+        <br><br>
+        <label for="pswd">Password</label><br>
+        <input type="password" required id="pswd" name="pswd">
+        <p class="p">Enter your password</p>
+        <br><br>
+        <label for="cpswd">Confirm Password</label><br>
+        <input type="password" required id="cpswd" name="cpswd">
+        <p class="p">Enter your Confirm password</p>
+        <br><br>
+        <label for="num">Phone Number</label><br>
+        <input type="text" required id="num" name="num" pattern="[6-9]{1}[0-9]{9}">
+        <p class="p">Enter your phone number</p>
+        <br><br>
+        <label for="clg">College Name</label><br>
+        <input type="text" id="clg" name="clg">
+        <p class="p">Enter your College name</p>
+        <br><br>
+        <label for="">Select Course</label><br>
+        <select name="course">
+            <option value="Java">Java Full stack Web Development</option>
+            <option value="Data">Data Structures and Algorithms</option>
+        </select><br><br>
+        <label for="mode">Mode</label><br>
+        <input type="radio" id="on" value="Online" name="mode">
+        <label for="on">Online</label>
+        <input type="radio" id="off" value="Offline" name="mode">
+        <label for="off">Offline</label><br><br>
+        <input type="submit">
+        </form>
+    </fieldset>
+</body>
+</html>
