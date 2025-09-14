@@ -3,63 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses</title>
+    <title>Courses | Tap Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cambria:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        i{
-            padding-right: 80px;
-            color: brown;
-            display: inline;
-        }
-        .a a{
-            padding-left: 40px;
-            padding-right: 140px;
-            display: inline;
-        }
-        h1{
-            margin-left: 500px;
-            font-family: Cambria;
-        }
-        h2{
-            margin-left: 550px;
-            font-family: Cambria;
+        .cambria-font {
+            font-family: 'Cambria', serif;
         }
     </style>
-    <link rel="icon" href="courses-icon-27.jpg">
-    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div id="top">
-        <img src="footer-taplogo.png" alt="image" height="100px" width="200px">
-        <a href="demo.html">Home</a>
-        <a href="courses.html">Courses</a>
-        <a href="placement.html">Placements</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="contact.html">Contact</a>
-    </div>
-    <br>
-    <fieldset class="a">
-        <h1>
-        1. Full Stack Web Development</h1>
-        <p>Tap Academy's full stack web developer course is designed using AR and has industry required skills which will make you job ready. Our full stack web developer course also comes with an additional incentive of providing placements as you learn the course, double treat for your eyes?Yes</p>
-        <h2>
-        Who are Full Stack Developers?
-        </h2>
-        <p>Full stack web developers can develop the entire web application and website from scratch. They have deep knowledge of two-three technologies and are comfortable with various technologies used in software development, forming a T-shaped skill set.</p>
-        <br>
-        <h3>
-            <i>Click the below image to know more about frontend</i>
-            <i>Click the below image to know more about backend</i>
-            <i>Click the below image to know more about database</i>
-        </h3>
-        <a href="frontend.html"><img src="frontend.jpeg" alt="" height="300px" width="300px"></a>
-        <a href="Backend.html"><img src="backend.jpg" alt="" height="300px" width="300px"></a>
-        <a href="database.html"><img src="database.jpeg" alt="" height="300px" width="300px"></a>
-    </fieldset>
-    <br>
-    <fieldset>
-        <h1>
-        2. Data Structures and Algorithms
-        </h1>
-        <p>DSA is defined as a combination of two separate yet interrelated topics.Data Structures and Algorithms. DSA is one of the most important skills that every computer science student must have.It is often seen that people with good knowledge of these technologies are better programmers than others and thus, crack the interviews of almost every tech giant.</p>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex flex-wrap items-center justify-between">
+            <div class="flex items-center">
+                <img src="footer-taplogo.png" alt="Tap Academy Logo" class="h-16 w-auto">
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Home</a>
+                <a href="courses.html" class="text-blue-600 font-medium">Courses</a>
+                <a href="placement.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Placements</a>
+                <a href="reviews.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Reviews</a>
+                <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button class="mobile-menu-button p-2 focus:outline-none">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white pb-4 px-4">
+            <a href="demo.html" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
+            <a href="courses.html" class="block py-2 text-blue-600 font-medium">Courses</a>
+            <a href="placement.html" class="block py-2 text-gray-700 hover:text-blue-600">Placements</a>
+            <a href="reviews.html" class="block py-2 text-gray-700 hover:text-blue-600">Reviews</a>
+            <a href="contact.html" class="block py-2 text-gray-700 hover:text-blue-600">Contact</a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Course 1 Section -->
+        <section class="mb-16 bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up">
+            <div class="p-6 md:p-8">
+                <h1 class="text-3xl md:text-4xl font-bold text-center cambria-font text-gray-800 mb-6">Full Stack Web Development</h1>
+                <p class="text-gray-600 mb-8 leading-relaxed">
+                    Tap Academy's full stack web developer course is designed using AR and has industry required skills which will make you job ready. Our full stack web developer course also comes with an additional incentive of providing placements as you learn the course, double treat for your eyes? Yes!
+                </p>
+                
+                <h2 class="text-2xl md:text-3xl font-semibold text-center cambria-font text-gray-800 mb-6">Who are Full Stack Developers?</h2>
+                <p class="text-gray-600 mb-8 leading-relaxed">
+                    Full stack web developers can develop the entire web application and website from scratch. They have deep knowledge of two-three technologies and are comfortable with various technologies used in software development, forming a T-shaped skill set.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+                    <div class="text-center">
+                        <div class="mb-4 flex justify-center">
+                            <i data-feather="layout" class="text-red-700 w-12 h-12"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-red-700 mb-4">Frontend Development</h3>
+                        <a href="frontend.html" class="block transition-transform hover:scale-105">
+                            <img src="frontend.jpeg" alt="Frontend Development" class="rounded-lg shadow-md w-full h-64 object-cover">
+                        </a>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="mb-4 flex justify-center">
+                            <i data-feather="server" class="text-blue-700 w-12 h-12"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-blue-700 mb-4">Backend Development</h3>
+                        <a href="Backend.html" class="block transition-transform hover:scale-105">
+                            <img src="backend.jpg" alt="Backend Development" class="rounded-lg shadow-md w-full h-64 object-cover">
+                        </a>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="mb-4 flex justify-center">
+                            <i data-feather="database" class="text-green-700 w-12 h-12"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-green-700 mb-4">Database Management</h3>
+                        <a href="database.html" class="block transition-transform hover:scale-105">
+                            <img src="database.jpeg" alt="Database Management" class="rounded-lg shadow-md w-full h-64 object-cover">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course 2 Section -->
+        <section class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up">
+            <div class="p-6 md:p-8">
+                <h1 class="text-3xl md:text-4xl font-bold text-center cambria-font text-gray-800 mb-6">Data Structures and Algorithms</h1>
+                <p class="text-gray-600 leading-relaxed">
+                    DSA is defined as a combination of two separate yet interrelated topics: Data Structures and Algorithms. DSA is one of the most important skills that every computer science student must have. It is often seen that people with good knowledge of these technologies are better programmers than others and thus, crack the interviews of almost every tech giant.
+                </p>
+                
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-blue-800 mb-3">Data Structures</h3>
+                        <p class="text-gray-600">Learn about arrays, linked lists, trees, graphs, and more to efficiently organize and store data.</p>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-green-800 mb-3">Algorithms</h3>
+                        <p class="text-gray-600">Master sorting, searching, recursion, dynamic programming and other essential algorithms.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p>&copy; 2023 Tap Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+        
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>

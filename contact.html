@@ -3,56 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact | TAP Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
     <style>
-        iframe{
-            margin-left: 500px;
+        .form-input:focus {
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+        }
+        .validation-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: none;
         }
     </style>
-    <link rel="icon" href="contact.jpeg">
-    <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: #B6FFFA;">
-    <div id="top">
-        <img src="footer-taplogo.png" alt="image" height="100px" width="200px">
-        <a href="demo.html">Home</a>
-        <a href="courses.html">Courses</a>
-        <a href="placement.html">Placements</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="contact.html">Contact</a>
+<body class="bg-blue-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center">
+                <img src="footer-taplogo.png" alt="TAP Academy Logo" class="h-16">
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+                <a href="courses.html" class="text-gray-700 hover:text-blue-600 transition">Courses</a>
+                <a href="placement.html" class="text-gray-700 hover:text-blue-600 transition">Placements</a>
+                <a href="reviews.html" class="text-gray-700 hover:text-blue-600 transition">Reviews</a>
+                <a href="contact.html" class="text-blue-600 font-medium">Contact</a>
+            </div>
+            <button class="md:hidden focus:outline-none">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-12">
+        <div class="max-w-4xl mx-auto">
+            <!-- Contact Header -->
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h1 class="text-4xl font-bold text-gray-800 mb-3">Contact Us</h1>
+                <p class="text-lg text-gray-600">Send us your query and our team will get back to you soon</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-lg shadow-lg p-6" data-aos="fade-right">
+                    <form action="thank.html" class="space-y-6">
+                        <div class="relative">
+                            <label for="name" class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" name="name" required pattern="[a-z A-Z]{3,20}"
+                                   class="w-full px-4 py-2 border border-gray-300 rounded-lg form-input focus:border-blue-500 focus:outline-none transition">
+                            <p class="text-sm text-gray-500 mt-1">Enter your full name</p>
+                        </div>
+
+                        <div class="relative">
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-2 border border-gray-300 rounded-lg form-input focus:border-blue-500 focus:outline-none transition">
+                            <p class="text-sm text-gray-500 mt-1">Enter your email address</p>
+                            <i data-feather="check-circle" class="validation-icon text-green-500"></i>
+                            <i data-feather="alert-circle" class="validation-icon text-red-500"></i>
+                        </div>
+
+                        <div class="relative">
+                            <label for="pn" class="block text-gray-700 mb-2">Phone Number</label>
+                            <input type="text" id="pn" name="pn" required pattern="[6-9]{1}[0-9]{9}"
+                                   class="w-full px-4 py-2 border border-gray-300 rounded-lg form-input focus:border-blue-500 focus:outline-none transition">
+                            <p class="text-sm text-gray-500 mt-1">Enter your 10-digit phone number</p>
+                        </div>
+
+                        <div class="relative">
+                            <label for="mes" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="mes" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg form-input focus:border-blue-500 focus:outline-none transition"></textarea>
+                            <p class="text-sm text-gray-500 mt-1">Enter your message here</p>
+                        </div>
+
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                            Submit Query
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Location Map -->
+                <div class="bg-white rounded-lg shadow-lg p-6" data-aos="fade-left">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Our Location</h3>
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.866204424284!2d77.60805687484445!3d12.916319716088303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d6411bbb945%3A0x884e5e751a18bc1!2sTAP%20Academy%20BTM!5e0!3m2!1sen!2sin!4v1698429988593!5m2!1sen!2sin" 
+                                class="w-full h-full rounded-lg border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="mt-6 space-y-2">
+                        <div class="flex items-center">
+                            <i data-feather="map-pin" class="text-blue-600 mr-3"></i>
+                            <span class="text-gray-700">BTM Layout, Bangalore, India</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="phone" class="text-blue-600 mr-3"></i>
+                            <span class="text-gray-700">+91 9876543210</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="mail" class="text-blue-600 mr-3"></i>
+                            <span class="text-gray-700">contact@tapacademy.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <br>
-    <h1>Contact Us</h1>
-    <h5>Send us your query our team will get back to you soon</h5>
-    <fieldset>
-        <legend>Details</legend>
-            <form action="thank.html">
-                <label for="name">Name</label><br>
-                <input type="text" id="name" required name="name" pattern="[a-z A-Z]{3,20}">
-                <p class="p">Enter your name</p>
-                <br><br>
-                <label for="email">Email</label><br>
-                <input type="email" id="email" required name="email">
-                <p class="p">Enter your Email</p>
-                <img class="valid img" src="check.jpeg" alt="">
-                <img class="invalid img" src="warn.jpeg" alt="">
-                <br><br>
-                <label for="pn">Phone Number</label><br>
-                <input type="text" id="pn" required name="pn" pattern="[6-9]{1}[0-9]{9}">
-                <p class="p">Enter your Phone number</p>
-                <br><br>
-                <label for="mes">Message</label><br>
-                <input type="text" id="mes">
-                <p class="p">Enter Message</p>
-                <br><br>
-                <input type="submit">
-            </form>
-    </fieldset>
-    <br>
-    <fieldset>
-        <h3>Location of Tap Academy</h3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.866204424284!2d77.60805687484445!3d12.916319716088303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d6411bbb945%3A0x884e5e751a18bc1!2sTAP%20Academy%20BTM!5e0!3m2!1sen!2sin!4v1698429988593!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </fieldset>
-    <br><br>
-    </body>
+
+    <script>
+        AOS.init();
+        feather.replace();
+        
+        // Email validation indicators
+        const emailInput = document.getElementById('email');
+        const validIcon = document.querySelector('.text-green-500');
+        const invalidIcon = document.querySelector('.text-red-500');
+        
+        emailInput.addEventListener('input', function() {
+            if (emailInput.validity.valid) {
+                validIcon.style.display = 'block';
+                invalidIcon.style.display = 'none';
+            } else {
+                validIcon.style.display = 'none';
+                invalidIcon.style.display = 'block';
+            }
+        });
+    </script>
+</body>
 </html>

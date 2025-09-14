@@ -3,41 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reviews</title>
-    <style>
-        h1{
-            margin-left: 550px;
-        }
-        h3{
-            font-family: cursive;
-        }
-        a{
-            padding-right: 50px;
-        }
-    </style>
-    <link rel="icon" href="reviews.jpeg">
-    <link rel="stylesheet" href="style.css">
+    <title>Reviews - Tap Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
-<body>
-    <div id="top">
-        <img src="footer-taplogo.png" alt="image" height="100px" width="200px">
-        <a href="demo.html">Home</a>
-        <a href="courses.html">Courses</a>
-        <a href="placement.html">Placements</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="contact.html">Contact</a>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex items-center justify-between">
+            <div class="flex items-center">
+                <img src="footer-taplogo.png" alt="Tap Academy Logo" class="h-16">
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-800 hover:text-blue-600 transition duration-300">Home</a>
+                <a href="courses.html" class="text-gray-800 hover:text-blue-600 transition duration-300">Courses</a>
+                <a href="placement.html" class="text-gray-800 hover:text-blue-600 transition duration-300">Placements</a>
+                <a href="reviews.html" class="text-blue-600 font-medium">Reviews</a>
+                <a href="contact.html" class="text-gray-800 hover:text-blue-600 transition duration-300">Contact</a>
+            </div>
+            <button class="md:hidden focus:outline-none">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden bg-white shadow-lg hidden" id="mobileMenu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="demo.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Home</a>
+            <a href="courses.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Courses</a>
+            <a href="placement.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Placements</a>
+            <a href="reviews.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 bg-blue-50">Reviews</a>
+            <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Contact</a>
+        </div>
     </div>
-    <br>
-    <h1>
-    Tap Academy Students Reviews
-    </h1>
-    <h3 style="margin-left: 200px;">
-        Our complete online training has made students learn to code anytime anywhere & got placed in various Companies.
-    </h3>
-    <h3 style="margin-left: 500px;">
-        Here are our few students placed at various companies.
-    </h3>
-        <img style="margin-left: 90px; padding-bottom: 30px;" src="Review1.png" alt="">
-        <img style="margin-left: 90px;" src="Reviews2.png" alt="">
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Tap Academy Students Reviews</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our complete online training has made students learn to code anytime anywhere & got placed in various Companies.
+            </p>
+            <p class="text-xl text-gray-600 mt-4">
+                Here are our few students placed at various companies.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-right">
+                <img src="Review1.png" alt="Student Review" class="w-full h-auto">
+            </div>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-left">
+                <img src="Reviews2.png" alt="Student Review" class="w-full h-auto">
+            </div>
+        </div>
+
+        <div class="text-center">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6">More Success Stories</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="zoom-in">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i data-feather="user" class="text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Rahul Sharma</h3>
+                    </div>
+                    <p class="text-gray-600">"The AR/VR learning experience at Tap Academy helped me secure a position at Amazon. The hands-on projects were invaluable!"</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i data-feather="user" class="text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Priya Patel</h3>
+                    </div>
+                    <p class="text-gray-600">"I transitioned from mechanical engineering to software development thanks to Tap Academy's comprehensive curriculum."</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i data-feather="user" class="text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Vikram Singh</h3>
+                    </div>
+                    <p class="text-gray-600">"The placement assistance team was incredibly supportive throughout my job search process. Got placed at Microsoft!"</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <img src="footer-taplogo.png" alt="Tap Academy Logo" class="h-16 mb-4">
+                    <p class="text-gray-300">Transforming careers through immersive learning experiences.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="demo.html" class="text-gray-300 hover:text-white transition">Home</a></li>
+                        <li><a href="courses.html" class="text-gray-300 hover:text-white transition">Courses</a></li>
+                        <li><a href="placement.html" class="text-gray-300 hover:text-white transition">Placements</a></li>
+                        <li><a href="reviews.html" class="text-white font-medium">Reviews</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+                    <p class="text-gray-300 mb-2"><i data-feather="mail" class="inline mr-2"></i> contact@tapacademy.com</p>
+                    <p class="text-gray-300 mb-2"><i data-feather="phone" class="inline mr-2"></i> +91 9876543210</p>
+                    <p class="text-gray-300"><i data-feather="map-pin" class="inline mr-2"></i> Bangalore, India</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition"><i data-feather="facebook"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white transition"><i data-feather="twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white transition"><i data-feather="instagram"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white transition"><i data-feather="linkedin"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white transition"><i data-feather="youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Tap Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Mobile menu toggle
+        document.querySelector('button').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        });
+        
+        feather.replace();
+    </script>
 </body>
 </html>

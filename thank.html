@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank you</title>
+    <title>Thank You</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        .thank-you-container {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .thank-you-image {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-radius: 0.5rem;
+        }
+    </style>
 </head>
-<body>
-    <img src="thankyou.jpeg" alt="" height="700px" width="1500px">
+<body class="min-h-screen flex items-center justify-center thank-you-container" data-aos="fade">
+    <div class="text-center p-8 max-w-4xl">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8">Thank You!</h1>
+        <p class="text-xl text-gray-600 mb-8">We appreciate your time and consideration.</p>
+        <div class="flex justify-center">
+            <img 
+                src="http://static.photos/gradient/1200x630/42" 
+                alt="Thank you illustration" 
+                class="thank-you-image w-full h-auto max-w-4xl"
+                data-aos="zoom-in"
+            >
+        </div>
+        <div class="mt-12">
+            <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300">
+                Return Home
+            </a>
+        </div>
+    </div>
+    <script>AOS.init();</script>
 </body>
 </html>
