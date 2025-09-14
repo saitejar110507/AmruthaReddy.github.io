@@ -1,2 +1,1 @@
-# AmruthaReddy.github.io
-CSS project
+# AmruthaReddy Tap Academy Web
